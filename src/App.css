@@ -9,6 +9,22 @@
 .fractionNumber{
   font-size: 20px;
   text-align: center;
+
+}
+
+.FractionFull {
+  vertical-align: middle;
+}
+
+.FullEquation{  
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Operation{
+  position: absolute;
+  right: 43%;
+  top: 46%;
 }
 
 .logo {
