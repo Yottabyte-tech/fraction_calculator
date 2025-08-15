@@ -16,6 +16,13 @@
   vertical-align: middle;
 }
 
+.FractionFullTwo {
+    position: absolute;
+
+  vertical-align: middle;
+  left: 39%;
+}
+
 .FullEquation{  
   display: flex;
   justify-content: flex-end;
@@ -23,7 +30,7 @@
 
 .Operation{
   position: absolute;
-  right: 43%;
+  right: 52.5%;
   top: 46%;
 }
 
