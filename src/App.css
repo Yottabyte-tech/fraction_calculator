@@ -26,12 +26,22 @@
 .FullEquation{  
   display: flex;
   justify-content: flex-end;
+
 }
 
 .Operation{
   position: absolute;
   right: 52.5%;
-  top: 46%;
+  top: 40%;
+  
+}
+
+.output{
+  border-width: 5px;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  border-radius: 5px;
+  background-color: rgb(63, 63, 63);
 }
 
 .logo {

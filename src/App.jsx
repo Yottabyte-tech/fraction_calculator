@@ -7,6 +7,8 @@ function App() {
   const [DenomiOne, setDenomiOne] = useState(0)
   const [numerTwo, setNumerTwo] = useState(0)
   const [DenomiTwo, setDenomiTwo] = useState(0)
+  const [DecimalOut, setDecimalOut] = useState(0)
+
 
   const outValue = () => {
     const numOne = document.getElementById('NumerOne').value
@@ -21,33 +23,37 @@ function App() {
 
     const operation = document.getElementById('Operation').value
 
-    if(operation === '+') {
-
+    if(operation == '+') {
+        setDecimalOut(((numOne * denomiTwo) + (numTwo * denomiOne))/(denomiOne * denomiTwo));
       }
-    else if(operation === '-') {
-
+    else if(operation == '-') {
+        setDecimalOut(((numTwo * denomiOne) - (numOne * denomiTwo))/(denomiTwo * denomiOne));
       }
-    else if(operation === '*') {
-      
+    else if(operation == '*') {
+
+      setDecimalOut((numOne * numTwo)/(denomiOne * denomiTwo));
   }
-    else if(operation === '/') {
+    else if(operation == '/') {
+      setDecimalOut((numOne * denomiTwo)/(denomiOne * numTwo));
 
       }
   }
 
   return (
     <>
+
+    
     <div class='FullEquation'>
       <div class='FractionFull'>
       <div class='fraction' id='Numerator'>
-          <input value={numOne} class='fractionNumber' id='NumerOne' type='number' style={{ width: '50px', height: '50px'}}></input>
+          <input onInput={outValue} class='fractionNumber' id='NumerOne' type='number' style={{ width: '50px', height: '50px'}}></input>
         </div>
       <p></p>
       <div class='fraction' id='Denominator'>
-          <input class='fractionNumber' id='DenomiOne' type='number' style={{ width: '50px', height: '50px'}}></input>
+          <input onInput={outValue} class='fractionNumber' id='DenomiOne' type='number' style={{ width: '50px', height: '50px'}}></input>
         </div>     
       </div>
-          <select class='Operation' id="Operation" name="Select Operation" style={{ width: '50px', height: '50px', textAlign: 'center', fontSize: '35px'}}>
+          <select onChange={outValue} class='Operation' id="Operation" name="Select Operation" style={{ width: '50px', height: '50px', textAlign: 'center', fontSize: '35px'}}>
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">*</option>
@@ -57,17 +63,21 @@ function App() {
 
       <div class='FractionFullTwo'>
       <div class='fraction' id='NumeratorTwo'>
-          <input class='fractionNumber' id='NumerTwo' type='number' style={{ width: '50px', height: '50px'}}></input>
+          <input onInput={outValue} class='fractionNumber' id='NumerTwo' type='number' style={{ width: '50px', height: '50px'}}></input>
         </div>
       <p></p>
       <div class='fraction' id='DenominatorTwo'>
-          <input class='fractionNumber' id='DenomiTwo' type='number' style={{ width: '50px', height: '50px'}}></input>
+          <input onInput={outValue} class='fractionNumber' id='DenomiTwo' type='number' style={{ width: '50px', height: '50px'}}></input>
         </div>     
+
+
       </div> 
 
-          </div>      
 
 
+    </div>      
+
+        <h1 class='output'>= {DecimalOut}</h1>
     </>
   )
 }
