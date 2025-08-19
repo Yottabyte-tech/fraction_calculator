@@ -11,6 +11,8 @@ function App() {
 
 
   const outValue = () => {
+    var valueToReturn
+
     const numOne = document.getElementById('NumerOne').value
     const denomiOne = document.getElementById('DenomiOne').value
     const numTwo = document.getElementById('NumerTwo').value
@@ -21,8 +23,11 @@ function App() {
     setNumerTwo(numTwo)
     setDenomiTwo(denomiTwo)
 
-    const operation = document.getElementById('Operation').value
+    if(numOne == 0 || numTwo == 0 || denomiOne == 0 || denomiTwo == 0){
+      return null;
+    }
 
+    const operation = document.getElementById('Operation').value
     if(operation == '+') {
         setDecimalOut(((numOne * denomiTwo) + (numTwo * denomiOne))/(denomiOne * denomiTwo));
       }
@@ -37,6 +42,14 @@ function App() {
       setDecimalOut((numOne * denomiTwo)/(denomiOne * numTwo));
 
       }
+
+    if(DecimalOut.isNan()){
+      setDecimalOut(0)
+    }
+
+
+
+
   }
 
   return (
@@ -79,8 +92,10 @@ function App() {
 
     <div class='spacer'>
         </div>
-
-        <h1 class='output'>= {DecimalOut}</h1>
+    <div class='output'>
+        <h1>= {DecimalOut}</h1>
+        <h1>= {Math.round(DecimalOut * 100)}%</h1>
+      </div>
     </>
   )
 }

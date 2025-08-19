@@ -31,10 +31,6 @@
   vertical-align: middle;
   left: 41%;
 
-  border-width: 5px;
-  border-color: rgb(0, 0, 0);
-  border-style: solid;
-  border-radius: 5px;
 }
 
 .FullEquation{  
@@ -59,7 +55,9 @@
   border-radius: 5px;
   background-color: rgb(63, 63, 63);
 
-  top: 70%
+  top: 10%;
+  left: 38.5%;
+
 }
 
 .logo {
