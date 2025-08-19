@@ -12,31 +12,41 @@
 
 }
 
+.spacer{
+  width: 10px;
+  height: 10px;
+
+}
+
 .FractionFull {
+  position: relative;
   vertical-align: middle;
+  right: 41%;
 }
 
 .FractionFullTwo {
-    position: absolute;
+  position: fixed;
+
 
   vertical-align: middle;
-  left: 39%;
+  left: 41%;
 }
 
 .FullEquation{  
   display: flex;
   justify-content: flex-end;
-
+  position: fixed;
 }
 
 .Operation{
-  position: absolute;
-  right: 52.5%;
-  top: 40%;
+  position: fixed;
+  right: 50%;
+  top: 55%;
   
 }
 
 .output{
+  position: fixed;
   border-width: 5px;
   border-color: rgb(0, 0, 0);
   border-style: solid;

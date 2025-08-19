@@ -77,6 +77,9 @@ function App() {
 
     </div>      
 
+    <div class='spacer'>
+        </div>
+
         <h1 class='output'>= {DecimalOut}</h1>
     </>
   )
