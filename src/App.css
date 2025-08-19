@@ -19,9 +19,9 @@
 }
 
 .FractionFull {
-  position: relative;
+  position: fixed;
   vertical-align: middle;
-  right: 41%;
+  right: 44.5%;
 }
 
 .FractionFullTwo {
@@ -30,12 +30,18 @@
 
   vertical-align: middle;
   left: 41%;
+
+  border-width: 5px;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  border-radius: 5px;
 }
 
 .FullEquation{  
   display: flex;
   justify-content: flex-end;
   position: fixed;
+
 }
 
 .Operation{
@@ -52,6 +58,8 @@
   border-style: solid;
   border-radius: 5px;
   background-color: rgb(63, 63, 63);
+
+  top: 70%
 }
 
 .logo {
